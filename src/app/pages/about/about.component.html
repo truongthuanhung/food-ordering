@@ -1,0 +1,379 @@
+<ng-template
+  #serviceTmpl
+  let-title="title"
+  let-content="content"
+  let-icon="icon"
+>
+  <div class="flex gap-[24px]">
+    <div>
+      <ng-container *ngTemplateOutlet="icon"></ng-container>
+    </div>
+    <div class="flex flex-col gap-[16px]">
+      <p class="text-[20px] font-bold">{{ title }}</p>
+      <p class="text-[16px] text-justify">
+        {{ content }}
+      </p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #restaurantMenu>
+  <svg
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M38 46L6 43V5L38 2V46Z"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M44 6V42"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M13 29H29"
+      stroke="#AD343E"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M13 36L29 37"
+      stroke="#AD343E"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M21 22C24.3137 22 27 19.3137 27 16C27 12.6863 24.3137 10 21 10C17.6863 10 15 12.6863 15 16C15 19.3137 17.6863 22 21 22Z"
+      stroke="#AD343E"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</ng-template>
+
+<ng-template #orderMenu>
+  <svg
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M38 22H10V38H38V22Z"
+      stroke="#AD343E"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M31 28H17"
+      stroke="#AD343E"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M29 12C30.1046 12 31 11.1046 31 10C31 8.89543 30.1046 8 29 8C27.8954 8 27 8.89543 27 10C27 11.1046 27.8954 12 29 12Z"
+      fill="#474747"
+    />
+    <path
+      d="M37 12C38.1046 12 39 11.1046 39 10C39 8.89543 38.1046 8 37 8C35.8954 8 35 8.89543 35 10C35 11.1046 35.8954 12 37 12Z"
+      fill="#474747"
+    />
+    <path
+      d="M40 4H8C5.79086 4 4 5.79086 4 8V40C4 42.2091 5.79086 44 8 44H40C42.2091 44 44 42.2091 44 40V8C44 5.79086 42.2091 4 40 4Z"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M10 10H16"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M4 16H44"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</ng-template>
+
+<ng-template #timer>
+  <svg
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M42 28V46H6V28"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M17 2H31"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M24 28L32.5 19.5"
+      stroke="#AD343E"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M24 2V5"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M24 46C33.9411 46 42 37.9411 42 28C42 18.0589 33.9411 10 24 10C14.0589 10 6 18.0589 6 28C6 37.9411 14.0589 46 24 46Z"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M24 16V18"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M36 28H34"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M32.485 36.485L31.071 35.071"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M24 40V38"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M15.5149 36.485L16.9289 35.071"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12 28H14"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M15.5149 19.515L16.9289 20.929"
+      stroke="#474747"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</ng-template>
+
+<div class="mt-[150px]">
+  <div class="flex items-center">
+    <div class="px-[140px] py-[85px] flex-1">
+      <img
+        src="../../assets/about-banner.png"
+        alt=""
+        class="block w-full rounded-[12px]"
+      />
+    </div>
+    <div
+      class="flex flex-col items-center gap-[24px] flex-1 px-[140px] py-[85px]"
+    >
+      <p class="title text-[55px] text-center font-medium">
+        Best food for your taste
+      </p>
+      <p class="text-[18px] font-medium text-justify">
+        Our story began with a vision to create a unique dining experience that
+        merges fine dining, exceptional service, and a vibrant ambiance. Rooted
+        in city's rich culinary culture, we aim to honor our local roots while
+        infusing a global palate.
+      </p>
+      <p class="text-[16px] text-justify">
+        At place, we believe that dining is not just about food, but also about
+        the overall experience. Our staff, renowned for their warmth and
+        dedication, strives to make every visit an unforgettable event.
+      </p>
+    </div>
+  </div>
+  <div class="bg relative">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div
+        class="w-[106px] h-[106px] rounded-[50%] bg-white flex items-center justify-center mx-auto cursor-pointer"
+      >
+        <svg
+          width="19"
+          height="22"
+          viewBox="0 0 19 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.85688 20.8798C2.52478 21.7124 0.796875 20.7547 0.796875 19.1838V2.33603C0.796875 0.765161 2.52478 -0.192521 3.85687 0.640039L17.3351 9.06394C18.5884 9.84727 18.5884 11.6726 17.3351 12.4559L3.85688 20.8798Z"
+            fill="#AD343E"
+          />
+        </svg>
+      </div>
+      <p class="title text-[55px] font-medium text-white text-center mt-[34px]">
+        Feel the authentic & original taste from us
+      </p>
+    </div>
+  </div>
+  <div class="py-[80px] px-[164px] flex items-center gap-[88px]">
+    <div>
+      <ng-container
+        [ngTemplateOutlet]="serviceTmpl"
+        [ngTemplateOutletContext]="{
+          title: 'Multi Cuisine',
+          content:
+            'In the new era of technology we look in the future with certainty life.',
+          icon: restaurantMenu
+        }"
+      >
+      </ng-container>
+    </div>
+    <div>
+      <ng-container
+        [ngTemplateOutlet]="serviceTmpl"
+        [ngTemplateOutletContext]="{
+          title: 'Easy To Order',
+          content:
+            'In the new era of technology we look in the future with certainty life.',
+          icon: orderMenu
+        }"
+      >
+      </ng-container>
+    </div>
+    <div>
+      <ng-container
+        [ngTemplateOutlet]="serviceTmpl"
+        [ngTemplateOutletContext]="{
+          title: 'Fast Delivery',
+          content:
+            'In the new era of technology we look in the future with certainty life.',
+          icon: timer
+        }"
+      >
+      </ng-container>
+    </div>
+  </div>
+  <div class="px-[150px] py-[120px] bg-[#F9F9F7] flex items-center gap-[130px]">
+    <div class="flex flex-col gap-[60px] flex-1">
+      <div class="flex flex-col gap-[20px]">
+        <p class="title text-[55px] font-medium">
+          A little information for our valuable guest
+        </p>
+        <p class="text-[16px]">
+          At place, we believe that dining is not just about food, but also
+          about the overall experience. Our staff, renowned for their warmth and
+          dedication, strives to make every visit an unforgettable event.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-[24px]">
+        <div
+          class="flex items-center flex-col bg-white rounded-[8px] py-[30px]"
+        >
+          <p class="title text-[55px] font-medium">3</p>
+          <p class="text-[18px] font-medium">Locations</p>
+        </div>
+        <div
+          class="flex items-center flex-col bg-white rounded-[8px] py-[30px]"
+        >
+          <p class="title text-[55px] font-medium">1995</p>
+          <p class="text-[18px] font-medium">Founded</p>
+        </div>
+        <div
+          class="flex items-center flex-col bg-white rounded-[8px] py-[30px]"
+        >
+          <p class="title text-[55px] font-medium">65+</p>
+          <p class="text-[18px] font-medium">Staff Members</p>
+        </div>
+        <div
+          class="flex items-center flex-col bg-white rounded-[8px] py-[30px]"
+        >
+          <p class="title text-[55px] font-medium">100%</p>
+          <p class="text-[18px] font-medium">Satisfied Customers</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1">
+      <img
+        src="../../assets/about-banner-1.png"
+        alt=""
+        class="block w-full rounded-[12px]"
+      />
+    </div>
+  </div>
+  <div class="px-[150px] py-[100px]">
+    <p class="title font-medium text-[55px] text-center">
+      What Our Customers Say
+    </p>
+    <div class="flex items-center gap-[24px] mt-[64px]">
+      <app-feedback-item
+        title="“The best restaurant”"
+        content="Last night, we dined at place and were simply blown away. From the moment we stepped in, we were enveloped in an inviting atmosphere and greeted with warm smiles."
+        name="Cristiano Ronaldo"
+        address="Portugal"
+        avatar="https://img.a.transfermarkt.technology/portrait/big/8198-1694609670.jpg?lm=1"
+      ></app-feedback-item>
+      <app-feedback-item
+        title="“Simply delicious”"
+        content="Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for our anniversary dinner. Each dish was prepared and beautifully presented."
+        name="Leo Messi"
+        address="Argentina"
+        avatar="data:image/jpeg;base64,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"
+      ></app-feedback-item>
+      <app-feedback-item
+        title="“One of a kind restaurant”"
+        content="The culinary experience at place is first to none. The atmosphere is vibrant, the food - nothing short of extraordinary. The food was the highlight of our evening. Highly recommended."
+        name="Gareth Bale"
+        address="Wales"
+        avatar="data:image/jpeg;base64,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"
+      ></app-feedback-item>
+    </div>
+  </div>
+</div>

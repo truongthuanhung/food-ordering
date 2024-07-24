@@ -1,0 +1,37 @@
+<ng-template #blogItem let-image="image" let-date="date" let-title="title">
+  <div
+    class="flex flex-col gap-[30px] rounded-[12px] border border-[#F9F9F7] shadow-md cursor-pointer"
+  >
+    <img [src]="image" alt="" class="rounded-t-[12px] w-full block" />
+    <div class="px-[24px] pb-[24px]">
+      <p class="text-[14px] font-medium text-[#737865]">{{ date }}</p>
+      <p class="mt-[12px] text-[18px] font-medium text-justify">
+        {{ title }}
+      </p>
+    </div>
+  </div>
+</ng-template>
+
+<div class="mt-[150px]">
+  <p class="title text-[100px] text-center">Our Blog & Articles</p>
+  <p class="text-[18px] text-center mt-[20px]">
+    We consider all the drivers of change gives you the components you need to
+    change to create a truly happens.
+  </p>
+  <div
+    class="pt-[72px] pb-[138px] px-[150px] grid grid-cols-4 gap-x-[24px] gap-y-[32px]"
+  >
+    <div *ngFor="let blog of blogList">
+      <a [routerLink]="['/blog', blog.id]" class="hover:text-current"
+        ><ng-container
+          [ngTemplateOutlet]="blogItem"
+          [ngTemplateOutletContext]="{
+            image: blog.image,
+            title: blog.title,
+            date: blog.date
+          }"
+        ></ng-container
+      ></a>
+    </div>
+  </div>
+</div>

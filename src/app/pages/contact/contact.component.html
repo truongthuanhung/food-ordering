@@ -1,0 +1,85 @@
+<div class="mt-[150px]">
+  <div class="bg-[#F9F9F7] pb-[340px] relative">
+    <p class="title text-[100px] text-center">Contact Us</p>
+    <p class="text-[18px] text-center mt-[20px]">
+      We consider all the drivers of change gives you the components you need to
+      change to create a truly happens.
+    </p>
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      class="absolute bg-white left-1/2 -translate-x-1/2 top-1/2 w-1/2 flex flex-col gap-[24px] rounded-[16px] shadow-lg p-[40px]"
+    >
+      <div class="flex gap-[24px]">
+        <div class="flex flex-col gap-[8px] flex-1">
+          <p class="text-[16px] font-bold">Name</p>
+          <input
+            nz-input
+            id="name"
+            type="text"
+            formControlName="name"
+            class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+          />
+        </div>
+        <div class="flex flex-col gap-[8px] flex-1">
+          <p class="text-[16px] font-bold">Email</p>
+          <input
+            nz-input
+            id="email"
+            type="text"
+            formControlName="email"
+            class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-[8px] flex-1">
+        <p class="text-[16px] font-bold">Subject</p>
+        <input
+          nz-input
+          id="subject"
+          type="text"
+          formControlName="subject"
+          class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+        />
+      </div>
+      <div class="flex flex-col gap-[8px] flex-1">
+        <p class="text-[16px] font-bold">Message</p>
+        <textarea
+          nz-input
+          id="message"
+          formControlName="message"
+          class="block text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[16px] px-[24px] py-[12px] h-[176px]"
+          rows="4"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="flex items-center justify-center bg-[#AD343E] text-[16px] font-bold text-white border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+  <div
+    class="bg-white flex items-center justify-center gap-[90px] mt-[350px] mb-[125px] px-[25.75%]"
+  >
+    <div class="flex flex-col gap-[24px] flex-1">
+      <p class="text-[20px] font-bold">Call Us:</p>
+      <p class="text-[24px] text-[#AD343E] font-bold">+1-234-567-8900</p>
+    </div>
+    <div class="flex flex-col gap-[24px] flex-1">
+      <p class="text-[20px] font-bold">Hours:</p>
+      <p class="text-[18px] text-black">
+        Mon-Fri: 11am - 8pm
+        <br />
+        Sat, Sun: 9am - 10pm
+      </p>
+    </div>
+    <div class="flex flex-col gap-[24px] flex-1">
+      <p class="text-[20px] font-bold">Our Location:</p>
+      <p class="text-[18px]">
+        123 Bridge Street Nowhere Land, LA 12345 United States
+      </p>
+    </div>
+  </div>
+</div>

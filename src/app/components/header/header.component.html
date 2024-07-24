@@ -1,0 +1,106 @@
+<div class="header fixed top-0 left-0 right-0 z-50">
+  <div class="h-[45px] flex justify-around bg-[#474747]">
+    <div class="flex text-[16px] text-[#F9F9F7] items-center gap-[25px]">
+      <p class="flex items-center gap-[8px]">
+        <app-phone-icon></app-phone-icon>
+        (414) 857 - 0107
+      </p>
+      <p class="flex items-center gap-[8px]">
+        <app-email-icon></app-email-icon>
+        yummy&#64;bistrobliss
+      </p>
+    </div>
+    <div class="flex gap-[4px] items-center text-[#F9F9F7]">
+      <div
+        class="h-[28px] w-[28px] rounded-[50%] bg-[#F9F9F71F] flex items-center justify-center cursor-pointer"
+      >
+        <app-twitter-icon></app-twitter-icon>
+      </div>
+      <div
+        class="h-[28px] w-[28px] rounded-[50%] bg-[#F9F9F71F] flex items-center justify-center cursor-pointer"
+      >
+        <app-facebook-icon></app-facebook-icon>
+      </div>
+      <div
+        class="h-[28px] w-[28px] rounded-[50%] bg-[#F9F9F71F] flex items-center justify-center cursor-pointer"
+      >
+        <app-instagram-icon></app-instagram-icon>
+      </div>
+      <div
+        class="h-[28px] w-[28px] rounded-[50%] bg-[#F9F9F71F] flex items-center justify-center cursor-pointer"
+      >
+        <app-github-icon></app-github-icon>
+      </div>
+    </div>
+  </div>
+  <div class="h-[105px] bg-[#F9F9F7] flex items-center justify-around">
+    <div class="flex items-center gap-[8px]">
+      <app-logo></app-logo>
+      <p class="italic font-semibold text-[42px] logo-text">Bistro Bliss</p>
+    </div>
+    <div class="flex items-center gap-[8px]">
+      <div
+        [ngClass]="{
+          'rounded-[34px] text-[16px] font-medium px-[16px] py-[4px] cursor-pointer': true,
+          'bg-[#DBDFD0]': url === '/',
+        }"
+      >
+        <a routerLink="/">Home</a>
+      </div>
+      <div
+        [ngClass]="{
+          'rounded-[34px] text-[16px] font-medium px-[16px] py-[4px] cursor-pointer': true,
+          'bg-[#DBDFD0]': url === '/about',
+        }"
+      >
+        <a routerLink="/about">About</a>
+      </div>
+      <div
+        [ngClass]="{
+          'rounded-[34px] text-[16px] font-medium px-[16px] py-[4px] cursor-pointer': true,
+          'bg-[#DBDFD0]': url === '/menu',
+        }"
+      >
+        <a routerLink="/menu">Menu</a>
+      </div>
+      <div
+        [ngClass]="{
+          'rounded-[34px] text-[16px] font-medium px-[16px] py-[4px] cursor-pointer': true,
+          'bg-[#DBDFD0]': url === '/blog',
+        }"
+      >
+        <a routerLink="/blog">Blog</a>
+      </div>
+      <div
+        [ngClass]="{
+          'rounded-[34px] text-[16px] font-medium px-[16px] py-[4px] cursor-pointer': true,
+          'bg-[#DBDFD0]': url === '/contact',
+        }"
+      >
+        <a routerLink="/contact">Contact</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-[16px]">
+      <a
+        [ngClass]="{
+          'font-bold text-[16px] rounded-[118px] px-[24px] py-[12px] cursor-pointer block': true,
+          'bg-[#AD343E] text-white hover:text-white': url === '/booking',
+          'border border-black hover:text-black': url !== '/booking'
+        }"
+        routerLink="/booking"
+      >
+        Book a table
+      </a>
+      <a
+        [ngClass]="{
+          'font-bold text-[16px] rounded-[118px] px-[24px] py-[12px] cursor-pointer block': true,
+          'bg-[#AD343E] text-white hover:text-white': url === '/login',
+          'border border-black hover:text-black': url !== '/login'
+        }"
+        routerLink="/login"
+      >
+        Login and signup
+      </a>
+    </div>
+  </div>
+</div>

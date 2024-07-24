@@ -1,0 +1,23 @@
+<div
+  class="flex px-[34px] py-[40px] flex-col items-center gap-[30px] border-[1.5px] border-[#DBDFD0] rounded-[12px]"
+>
+  <div
+    class="p-[26px] rounded-[50%] bg-[#f3f3f0] flex items-center justify-center"
+  >
+    <div [ngSwitch]="iconType">
+      <app-tea-icon *ngSwitchCase="'tea'"></app-tea-icon>
+      <app-dish-icon *ngSwitchCase="'dish'"></app-dish-icon>
+      <app-drink-icon *ngSwitchCase="'drink'"></app-drink-icon>
+      <app-dessert-icon *ngSwitchCase="'dessert'"></app-dessert-icon>
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-[15px]">
+    <p class="text-center text-[24px] font-bold">{{ title }}</p>
+    <p class="text-[16px] text-center">
+      {{ content }}
+    </p>
+  </div>
+  <p class="text-[#AD343E] text-[16px] font-bold cursor-pointer">
+    Explore Menu
+  </p>
+</div>

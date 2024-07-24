@@ -1,0 +1,77 @@
+<div class="mt-[150px]">
+  <div class="bg-[#F9F9F7] pb-[340px] relative">
+    <p class="title text-[100px] text-center">Book A Table</p>
+    <p class="text-[18px] text-center mt-[20px]">
+      We consider all the drivers of change gives you the components you need to
+      change to create a truly happens.
+    </p>
+  </div>
+  <form
+    [formGroup]="bookingForm"
+    (ngSubmit)="onSubmit()"
+    class="absolute bg-white left-1/2 -translate-x-1/2 top-[380px] w-1/2 flex flex-col gap-[24px] rounded-[16px] shadow-lg p-[40px] z-40"
+  >
+    <div class="flex gap-[24px]">
+      <div class="flex flex-col gap-[8px] flex-1">
+        <p class="text-[16px] font-bold">Date</p>
+        <nz-date-picker
+          formControlName="date"
+          nzPlaceHolder="Choose date"
+          [nzFormat]="dateFormat"
+          class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+        ></nz-date-picker>
+      </div>
+      <div class="flex flex-col gap-[8px] flex-1">
+        <p class="text-[16px] font-bold">Time</p>
+        <nz-time-picker
+          formControlName="time"
+          nzPlaceHolder="Choose date"
+          class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+        ></nz-time-picker>
+      </div>
+    </div>
+    <div class="flex gap-[24px]">
+      <div class="flex flex-col gap-[8px] flex-1">
+        <p class="text-[16px] font-bold">Name</p>
+        <input
+          nz-input
+          id="name"
+          type="text"
+          formControlName="name"
+          class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+        />
+      </div>
+      <div class="flex flex-col gap-[8px] flex-1">
+        <p class="text-[16px] font-bold">Phone</p>
+        <input
+          nz-input
+          id="phone"
+          type="text"
+          formControlName="phone"
+          class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col gap-[8px] flex-1">
+      <p class="text-[16px] font-bold">Total Person</p>
+      <select
+        name="total-person"
+        id="total-person"
+        class="flex items-center text-[16px] text-[#737865] border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+        formControlName="total"
+      >
+        <option value="1">1 Person</option>
+        <option value="2">2 Persons</option>
+        <option value="3">3 Persons</option>
+        <option value="4">4 Persons</option>
+      </select>
+    </div>
+    <button
+      type="submit"
+      class="flex items-center justify-center bg-[#AD343E] text-[16px] font-bold text-white border border-[#DBDFD0] rounded-[72px] px-[24px] py-[18px]"
+    >
+      Book A Table
+    </button>
+  </form>
+  <div class="booking-banner"></div>
+</div>

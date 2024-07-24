@@ -1,0 +1,13 @@
+<div class="px-[35px] py-[45px] rounded-[12px] bg-[#F9F9F7]">
+  <p class="text-[#AD343E] text-[24px] font-bold">{{ title }}</p>
+  <p class="mt-[24px] mb-[32px] text-[18px] text-justify">
+    {{ content }}
+  </p>
+  <div class="pt-[32px] border-t border-[#DBDFD0] flex items-center gap-[20px]">
+    <img [src]="avatar" alt="" class="block w-[70px] h-[70px] rounded-[50%] object-cover" />
+    <div class="flex flex-col gap-[4px]">
+      <p class="text-[16px] font-bold">{{ name }}</p>
+      <p class="text-[16px]">{{ address }}</p>
+    </div>
+  </div>
+</div>
